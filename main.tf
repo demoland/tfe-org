@@ -4,6 +4,6 @@ resource "tfe_organization" "demodan" {
 }
 
 resource "tfe_project" "demo_project" {
-  organization = tfe_organization.test-organization.name
+  organization = tfe_organization.demodan.name
   name         = "demodan"
 }

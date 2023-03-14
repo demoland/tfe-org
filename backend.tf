@@ -1,6 +1,6 @@
 backend "remote" {
-    organization = "demo-land"
-    workspaces {
-      name = "tfe"
-    }
+  organization = "demo-land"
+  workspaces {
+    name = "tfe"
+  }
 }

@@ -1,18 +1,18 @@
 
-resource "tfe_organization" "tfeo" {
+resource "tfe_organization" "this" {
   name  = var.org_name
   email = var.email
 }
 
-resource "tfe_project" "project" {
+resource "tfe_project" "this" {
   name         = var.project_name
-  organization = tfe_organization.tfeo.name
+  organization = tfe_organization.this.name
 }
 
-resource "tfe_workspace" "workspace" {
+resource "tfe_workspace" "this" {
   name         = var.workspace_name
-  organization = tfe_organization.tfeo.name
-  project_id = tfe_project.project.id
+  organization = tfe_organization.this.name
+  project_id = tfe_project.this.id
   tag_names = [
     "aws",
     "vpc",

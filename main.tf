@@ -1,5 +1,3 @@
-
-####
 resource "tfe_organization" "to" {
   name  = var.org_name
   email = var.email

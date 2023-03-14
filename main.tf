@@ -11,6 +11,7 @@ resource "tfe_project" "demo" {
 resource "tfe_workspace" "aws_vpc" {
   name         = "aws-vpc"
   organization = tfe_organization.demodan.name
+  project_id = tfe_project.demo.id
   tag_names = [
     "aws",
     "vpc",

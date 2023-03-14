@@ -2,9 +2,10 @@ variable "token" {
   type        = string
   description = "The token to use for authentication with the Terraform Enterprise API."
 }
+
 variable "org_name" {
   type = string
-  default = "ALOHA"
+  default = "blue-aloha"
 }
 
 variable "email" {
@@ -14,11 +15,11 @@ variable "email" {
 
 variable "project_name" {
   type = string
-  default = "ALOHA"
+  default = "blue-aloha"
 }
 
 variable "workspace_name" {
   type = string
-  default = "ALOHA"
+  default = "aws-vpc"
 }
  

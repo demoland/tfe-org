@@ -1,17 +1,38 @@
-resource "tfe_organization" "demodan" {
-  name  = "DEMODAN"
-  email = "daniel.fedick@hashicorp.com"
+variable "org_name" {
+  type = string
+  default = "ALOHA"
 }
 
-resource "tfe_project" "demo" {
-  name         = "demo-dan"
-  organization = tfe_organization.demodan.name
+variable "email" {
+  type = string
+  default = "daniel.fedick@hashicorp.com"
 }
 
-resource "tfe_workspace" "aws_vpc" {
-  name         = "aws-vpc"
-  organization = tfe_organization.demodan.name
-  project_id = tfe_project.demo.id
+variable "project_name" {
+  type = string
+  default = "ALOHA"
+}
+
+variable "workspace_name" {
+  type = string
+  default = "ALOHA"
+}
+
+####
+resource "tfe_organization" "to" {
+  name  = var.org_name
+  email = var.email
+}
+
+resource "tfe_project" "tp" {
+  name         = var.project_name
+  organization = tfe_organization.to.name
+}
+
+resource "tfe_workspace" "tw" {
+  name         = var.workspace_name
+  organization = tfe_organization.to.name
+  project_id = tfe_project.tp.id
   tag_names = [
     "aws",
     "vpc",

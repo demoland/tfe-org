@@ -9,8 +9,8 @@ resource "tfe_project" "this" {
   organization = tfe_organization.this.name
 }
 
-resource "tfe_workspace" "this" {
-  name         = var.workspace_name
+resource "tfe_workspace" "aws_vpc" {
+  name         = "${var.name}-aws-vpc"
   organization = tfe_organization.this.name
   project_id = tfe_project.this.id
   vcs_repo {

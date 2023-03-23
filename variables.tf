@@ -18,8 +18,3 @@ variable "project_name" {
   default = "blue-aloha"
 }
 
-variable "workspace_name" {
-  type = string
-  default = "aws-vpc"
-}
- 

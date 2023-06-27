@@ -1,11 +1,14 @@
 workspaces = [
-  demo-test = {
-    org      = demo-land
-    name     = string
-    vcs_repo = string
-  },
-  demo-dan = {
-    org      = demo-land
-    name     = string
-    vcs_repo = string
-}
+  space-aliens = {
+    description = "Here lies a module for generating multiple aws vpcs"
+    org      = "demo-land"
+    project = "MDA"
+    vcs = {
+        org = "demoland"
+        repo = "aws-vpc-testing"
+        branch = "main"
+        provider = "gitlab"
+        tag = "default"
+    }
+  }
+]

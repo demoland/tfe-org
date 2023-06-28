@@ -1,6 +1,6 @@
 resource "tfe_workspace" "this" {
   for_each     = var.workspaces
-  name         = keys(each.value)
+  name         = each.key
   organization = each.value.org
   vcs_repo {
     identifier     = "${each.value.vcs.org}/${each.value.vcs.repo}"

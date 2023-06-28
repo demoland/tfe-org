@@ -1,5 +1,5 @@
 workspaces = [
-  space-aliens = {
+  magical-mystery = {
     description = "Here lies a module for generating multiple aws vpcs"
     org      = "demo-land"
     project = "MDA"
@@ -9,6 +9,7 @@ workspaces = [
         branch = "main"
         provider = "gitlab"
         tag = "default"
+        file_triggers_enabled = false
     }
   }
 ]

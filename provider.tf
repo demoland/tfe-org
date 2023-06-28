@@ -3,21 +3,12 @@ terraform {
   required_providers {
     tfe = {
       source  = "hashicorp/tfe"
-      version = "0.42.0"
+      version = "0.44.0"
     }
-    # github = {
-    #   source  = "integrations/github"
-    #   version = "5.0"
-    # }
   }
 }
 
 provider "tfe" {
-  token = var.token
+  token = var.tokens.terraform
+  hostname = "app.terraform.io"
 }
-
-# provider "github" {
-#   token = var.token # or `GITHUB_TOKEN`
-#   organization = var.gh_organization
-# }
-

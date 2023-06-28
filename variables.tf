@@ -36,14 +36,14 @@ variable "terraform_token" {
   sensitive   = true
 }
 
-variable "github_token" {
-  description = "Github Token"
+variable "github_token_id" {
+  description = "Github Oauth Token ID"
   type        = string
   sensitive   = true
 }
 
-variable "gitlab_token" {
-  description = "GitLab Auth Token"
+variable "gitlab_token_id" {
+  description = "GitLab OAuth Token ID"
   type        = string
   sensitive   = true
 }

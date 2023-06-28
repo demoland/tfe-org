@@ -30,12 +30,20 @@ variable "workspaces" {
   }
 }
 
-variable "tokens" {
-  description = "Tokens for various systems"
-  type        = map(string)
-  default = {
-    github    = "yourGithubToken"
-    gitlab    = "yourGitlabToken"
-    terraform = "yourTerraformToken"
-  }
+variable terraform_token {
+  default = "yourDefaultTerraformToken"
+  type = string
+  description = ""
+}
+
+variable github_token {
+  default =  "yourDefaultGitHubToken"
+  type = string
+  description = ""
+}
+
+variable gitlab_token {
+  default = "yourDefaultTerraformToken"
+  type = string
+  description = ""
 }

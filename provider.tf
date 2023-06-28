@@ -9,6 +9,6 @@ terraform {
 }
 
 provider "tfe" {
-  token    = var.tokens.terraform
+  token    = var.terraform_token
   hostname = "app.terraform.io"
 }

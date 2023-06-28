@@ -13,21 +13,6 @@ variable "workspaces" {
       tag                   = string
     })
   }))
-  default = {
-    "default_workspace" = {
-      description = "Default Organization Text"
-      org         = "demo-land"
-      project     = "Default"
-      vcs = {
-        org                   = "demoland"
-        repo                  = "TEST-DEFAULT"
-        branch                = "main"
-        provider              = "github"
-        file_triggers_enabled = false
-        tag                   = ""
-      }
-    }
-  }
 }
 
 variable terraform_token {

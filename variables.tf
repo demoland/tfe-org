@@ -9,7 +9,7 @@ variable "workspaces" {
       repo                  = string
       branch                = string
       provider              = string
-      file_triggers_enabled = boolean
+      file_triggers_enabled = bool
       tag                   = string
     }))
   }))

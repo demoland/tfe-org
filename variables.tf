@@ -5,35 +5,35 @@ variable "workspaces" {
     org         = string
     project     = string
     vcs = map(object({
-      org      = string
-      repo     = string
-      branch   = string
-      provider = string
+      org                   = string
+      repo                  = string
+      branch                = string
+      provider              = string
       file_triggers_enabled = boolean
-      tag = string
+      tag                   = string
     }))
   }))
   default = map(object({
     description = "Default Organization Text"
-    org = "demo-land"
-    project = "Default"
+    org         = "demo-land"
+    project     = "Default"
     vcs = map(object({
-      org = "demoland"
-      repo = "TEST-DEFAULT"
-      branch = "main"
-      provider = "github"
+      org                   = "demoland"
+      repo                  = "TEST-DEFAULT"
+      branch                = "main"
+      provider              = "github"
       file_triggers_enabled = false
-      tag = ""
+      tag                   = ""
     }))
   }))
 }
 
 variable "tokens" {
-  sensitive   = true
-  description = "A map of Git Tokens"
-  type = map(object({
-    github = string
-    gitlab = string
-    terraform = string
-  }))
+  description = "Tokens for various systems"
+  type        = map(string)
+  default = {
+    github    = "yourGithubToken"
+    gitlab    = "yourGitlabToken"
+    terraform = "yourTerraformToken"
+  }
 }

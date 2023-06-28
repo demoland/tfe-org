@@ -9,7 +9,7 @@ workspaces = {
       branch                = "main",
       provider              = "gitlab",
       tag                   = "default",
-      file_triggers_enabled = false
+      file_triggers_enabled = false,
     }
   }
 }

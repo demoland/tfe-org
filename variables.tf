@@ -30,20 +30,20 @@ variable "workspaces" {
   }
 }
 
-variable terraform_token {
-  default = "yourDefaultTerraformToken"
-  type = string
-  description = ""
+variable "terraform_token" {
+  description = "Terraform Token"
+  type        = string
+  sensitive   = true
 }
 
-variable github_token {
-  default =  "yourDefaultGitHubToken"
-  type = string
-  description = ""
+variable "github_token" {
+  description = "Github Token"
+  type        = string
+  sensitive   = true
 }
 
-variable gitlab_token {
-  default = "yourDefaultTerraformToken"
-  type = string
-  description = ""
+variable "gitlab_token" {
+  description = "GitLab Auth Token"
+  type        = string
+  sensitive   = true
 }

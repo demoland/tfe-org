@@ -1,3 +1,4 @@
 output "workspaces" {
-    value = tfe_workspace.this 
+  for_each = tfe_workspace.this  
+    value = { each.value.name = each.value.id }
 }

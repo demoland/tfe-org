@@ -1,18 +1,18 @@
 workspaces = {
-  magical-mystery = {
-    description       = "Here lies a module for generating multiple aws vpcs",
-    org               = "demo-land",
-    project           = "MDA",
-    working_directory = "/"
-    vcs = {
-      org                   = "demoland",
-      repo                  = "aws-vpc-testing",
-      branch                = "main",
-      provider              = "gitlab",
-      tag                   = "default",
-      file_triggers_enabled = false,
-    }
-  },
+  # magical-mystery = {
+  #   description       = "Here lies a module for generating multiple aws vpcs",
+  #   org               = "demo-land",
+  #   project           = "MDA",
+  #   working_directory = "/"
+  #   vcs = {
+  #     org                   = "demoland",
+  #     repo                  = "aws-vpc-testing",
+  #     branch                = "main",
+  #     provider              = "gitlab",
+  #     tag                   = "default",
+  #     file_triggers_enabled = false,
+  #   }
+  # },
   hashistack = {
     description       = "HashiStack"
     org               = "demo-land",

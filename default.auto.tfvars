@@ -3,6 +3,7 @@ workspaces = {
     description = "Here lies a module for generating multiple aws vpcs",
     org         = "demo-land",
     project     = "MDA",
+    working_directory = "/"
     vcs = {
       org                   = "demoland",
       repo                  = "aws-vpc-testing",

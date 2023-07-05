@@ -1,8 +1,8 @@
 workspaces = {
   magical-mystery = {
-    description = "Here lies a module for generating multiple aws vpcs",
-    org         = "demo-land",
-    project     = "MDA",
+    description       = "Here lies a module for generating multiple aws vpcs",
+    org               = "demo-land",
+    project           = "MDA",
     working_directory = "/"
     vcs = {
       org                   = "demoland",
@@ -14,9 +14,9 @@ workspaces = {
     }
   },
   hashistack = {
-    description = "HashiStack"
-    org         = "demo-land",
-    project     = "HASHISTACK",
+    description       = "HashiStack"
+    org               = "demo-land",
+    project           = "HASHISTACK",
     working_directory = "aws/"
     vcs = {
       org                   = "demoland",

@@ -1,9 +1,9 @@
 variable "workspaces" {
   description = "A map of all workspaces"
   type = map(object({
-    description = string
-    org         = string
-    project     = string
+    description       = string
+    org               = string
+    project           = string
     working_directory = string
     vcs = object({
       org                   = string
@@ -16,9 +16,9 @@ variable "workspaces" {
   }))
   default = {
     "default_workspace" = {
-      description = "Default Organization Text"
-      org         = "demo-land"
-      project     = "Default"
+      description       = "Default Organization Text"
+      org               = "demo-land"
+      project           = "Default"
       working_directory = "/"
       vcs = {
         org                   = "demoland"
@@ -38,14 +38,14 @@ variable "terraform_token" {
   sensitive   = true
 }
 
-variable "github_token" {
+variable "github_token_id" {
   description = "Github Oauth Token ID"
   type        = string
-  sensitive   = true
+  default = "ot-n6qt54hjW6DTX6Wt"
 }
 
-variable "gitlab_token" {
+variable "gitlab_token_id" {
   description = "GitLab OAuth Token ID"
   type        = string
-  sensitive   = true
+  default = "ot-WRvVKkLDVi8hu7Jc"
 }

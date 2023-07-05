@@ -4,6 +4,7 @@ variable "workspaces" {
     description = string
     org         = string
     project     = string
+    working_directory = string
     vcs = object({
       org                   = string
       repo                  = string
@@ -18,6 +19,7 @@ variable "workspaces" {
       description = "Default Organization Text"
       org         = "demo-land"
       project     = "Default"
+      working_directory = "/"
       vcs = {
         org                   = "demoland"
         repo                  = "TEST-DEFAULT"

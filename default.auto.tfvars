@@ -37,7 +37,7 @@ workspaces = {
       org                   = "RGS-HASHI",
       repo                  = "aws-rke",
       branch                = "main",
-      provider              = "github",
+      provider              = "gitlab",
       tag                   = "default",
     }
   }

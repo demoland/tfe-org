@@ -5,13 +5,13 @@ variable "workspaces" {
     org               = string
     project_id        = string
     working_directory = string
-    auto_apply = bool 
+    auto_apply        = bool
     vcs = object({
-      org                   = string
-      repo                  = string
-      branch                = string
-      provider              = string
-      tag                   = string
+      org      = string
+      repo     = string
+      branch   = string
+      provider = string
+      tag      = string
     })
   }))
   default = {
@@ -20,13 +20,13 @@ variable "workspaces" {
       org               = "demo-land"
       project_id        = "prj-Ken41UUB8yVPmjv5"
       working_directory = "/"
-      auto_apply = true
+      auto_apply        = true
       vcs = {
-        org                   = "demoland"
-        repo                  = "TEST-DEFAULT"
-        branch                = "main"
-        provider              = "github"
-        tag                   = ""
+        org      = "demoland"
+        repo     = "TEST-DEFAULT"
+        branch   = "main"
+        provider = "github"
+        tag      = ""
       }
     }
   }

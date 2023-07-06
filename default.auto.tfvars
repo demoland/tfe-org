@@ -18,13 +18,13 @@ workspaces = {
     org               = "demo-land",
     project_id        = "prj-hNRu8PsA4i94SMrD",
     working_directory = "aws/"
-    auto_apply = true
+    auto_apply        = true
     vcs = {
-      org                   = "demoland",
-      repo                  = "hashistack",
-      branch                = "main",
-      provider              = "github",
-      tag                   = "default",
+      org      = "demoland",
+      repo     = "hashistack",
+      branch   = "main",
+      provider = "github",
+      tag      = "default",
     }
   },
   aws-rke = {
@@ -32,13 +32,13 @@ workspaces = {
     org               = "demo-land",
     project_id        = "prj-8uUTAWg1ar7Z8LTN",
     working_directory = "/"
-    auto_apply = true
+    auto_apply        = true
     vcs = {
-      org                   = "RGS-HASHI",
-      repo                  = "aws-rke",
-      branch                = "main",
-      provider              = "gitlab",
-      tag                   = "default",
+      org      = "RGS-HASHI",
+      repo     = "aws-rke",
+      branch   = "main",
+      provider = "gitlab",
+      tag      = "default",
     }
   }
 }

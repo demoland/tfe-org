@@ -26,5 +26,19 @@ workspaces = {
       tag                   = "default",
       file_triggers_enabled = true,
     }
+  },
+  aws-rke = {
+    description       = "AWS RGS RKE2"
+    org               = "demo-land",
+    project_id        = "prj-8uUTAWg1ar7Z8LTN",
+    working_directory = "/"
+    vcs = {
+      org                   = "RGS-HASHI",
+      repo                  = "aws-rke",
+      branch                = "main",
+      provider              = "github",
+      tag                   = "default",
+      file_triggers_enabled = true,
+    }
   }
 }

@@ -24,7 +24,7 @@ workspaces = {
       branch                = "main",
       provider              = "github",
       tag                   = "default",
-      file_triggers_enabled = false,
+      file_triggers_enabled = true,
     }
   }
 }

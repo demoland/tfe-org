@@ -1,3 +1,3 @@
-output "workspaces" {
-  value = { for k, v in tfe_workspace.this : k => v.id }
+output "projects" {
+  value = { for k, v in tfe_project.this : k => v.id }
 }

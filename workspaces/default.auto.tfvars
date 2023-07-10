@@ -48,6 +48,22 @@ workspaces = {
       provider = "github",
       tag      = "default",
     }
+  },
+    aws-vpc = {
+    description         = "AWS VPC"
+    org                 = "demo-land",
+    working_directory   = "/"
+    project_name        = "HASHISTACK"
+    trigger_prefixes    = ["/"]
+    global_remote_state = true
+    auto_apply          = true
+    vcs = {
+      org      = "demoland",
+      repo     = "aws-vpc",
+      branch   = "main",
+      provider = "github",
+      tag      = "default",
+    }
   }
 }
 

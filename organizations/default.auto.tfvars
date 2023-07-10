@@ -1,5 +1,5 @@
 organizations = {
-  demoland = {
+  demo-land = {
     email = "daniel.fedick@hashicorp.com"
   }
 }

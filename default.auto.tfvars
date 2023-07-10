@@ -40,5 +40,19 @@ workspaces = {
       provider = "gitlab",
       tag      = "default",
     }
+  },
+  aws-kms = {
+    description       = "AWS KMS"
+    org               = "demo-land",
+    project_id        = "prj-hNRu8PsA4i94SMrD",
+    working_directory = "kms/"
+    auto_apply        = true
+    vcs = {
+      org      = "demoland",
+      repo     = "hashistack",
+      branch   = "main",
+      provider = "github",
+      tag      = "default",    
+    }
   }
 }

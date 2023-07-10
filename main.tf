@@ -4,6 +4,7 @@ resource "tfe_workspace" "this" {
   organization = each.value.org
   project_id   = each.value.project_id
   auto_apply   = each.value.auto_apply
+  trigger_prefixes = each.value.trigger_prefixes
   vcs_repo {
     identifier     = "${each.value.vcs.org}/${each.value.vcs.repo}"
     branch         = each.value.vcs.branch

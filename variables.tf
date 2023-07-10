@@ -5,6 +5,7 @@ variable "workspaces" {
     org               = string
     project_id        = string
     working_directory = string
+    trigger_prefixes = string
     auto_apply        = bool
     vcs = object({
       org      = string
@@ -20,6 +21,7 @@ variable "workspaces" {
       org               = "demo-land"
       project_id        = "prj-Ken41UUB8yVPmjv5"
       working_directory = "/"
+      trigger_prefixes  = "/"
       auto_apply        = true
       vcs = {
         org      = "demoland"

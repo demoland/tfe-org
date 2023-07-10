@@ -5,7 +5,7 @@ variable "workspaces" {
     org               = string
     project_id        = string
     working_directory = string
-    trigger_prefixes = string
+    trigger_prefixes = list(string)
     auto_apply        = bool
     vcs = object({
       org      = string

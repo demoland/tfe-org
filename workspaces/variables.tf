@@ -1,24 +1,10 @@
-variable "organizations" {
-  description = "A map of organizations"
-  type = map(object({
-    email = string
-  }))
-}
-
-variable "projects" {
-  description = "A map of projects"
-  type = map(object({
-    organization = string
-  }))
-}
-
 variable "workspaces" {
   description = "A map of all workspaces"
   type = map(object({
     description         = string
     org                 = string
-    project_id          = string
     working_directory   = string
+    project_name        = string
     trigger_prefixes    = list(string)
     global_remote_state = bool
     auto_apply          = bool
@@ -34,8 +20,8 @@ variable "workspaces" {
     "default_workspace" = {
       description         = "Default Organization Text"
       org                 = "demo-land"
-      project_id          = "prj-Ken41UUB8yVPmjv5"
       working_directory   = "/"
+      project_name        = "Default"
       trigger_prefixes    = ["/"]
       global_remote_state = true
       auto_apply          = true

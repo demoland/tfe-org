@@ -1,24 +1,14 @@
-organizations = {
-  demoland = {
-    email = "daniel.fedick@hashicorp.com"
-  }
-}
-
-projects = {
-  HASHISTACK = {
-    organization = "demo-land"
-  }
-}
 
 workspaces = {
   aws-rke = {
     description         = "AWS RGS RKE2"
     org                 = "demo-land"
-    project_id          = local.aws_rke_project
     working_directory   = "/"
+    project_name        = "RGS-RKE"
     trigger_prefixes    = ["/"]
     global_remote_state = true
-    auto_apply          = true
+
+    auto_apply = true
     vcs = {
       org      = "RGS-HASHI",
       repo     = "aws-rke",
@@ -30,8 +20,8 @@ workspaces = {
   hashistack = {
     description         = "HashiStack"
     org                 = "demo-land",
-    project_id          = local.hashistack_project
     working_directory   = "aws/"
+    project_name        = "HASHISTACK"
     trigger_prefixes    = ["aws/"]
     global_remote_state = true
     auto_apply          = true
@@ -46,8 +36,8 @@ workspaces = {
   aws-kms = {
     description         = "AWS KMS"
     org                 = "demo-land",
-    project_id          = local.hashistack_project
     working_directory   = "kms/"
+    project_name        = "HASHISTACK"
     trigger_prefixes    = ["kms/"]
     global_remote_state = true
     auto_apply          = true

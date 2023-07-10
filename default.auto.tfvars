@@ -6,7 +6,7 @@ organizations = {
 
 projects = {
   HASHISTACK = {
-    organization = "demoland"
+    organization = "demo-land"
   }
 }
 

@@ -21,7 +21,7 @@ variable "workspaces" {
       org               = "demo-land"
       project_id        = "prj-Ken41UUB8yVPmjv5"
       working_directory = "/"
-      trigger_prefixes  = "/"
+      trigger_prefixes  = ["/"]
       auto_apply        = true
       vcs = {
         org      = "demoland"

@@ -45,7 +45,7 @@ variable "terraform_token" {
 variable "github_token_id" {
   description = "Github Oauth Token ID"
   type        = string
-  default     = "ot-jv2Y49AzfWau9Un3"
+  default     = "ot-vNfvkLf7kGrPwEna"
 }
 
 variable "gitlab_token_id" {

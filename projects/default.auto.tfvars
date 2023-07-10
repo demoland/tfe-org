@@ -3,6 +3,6 @@ projects = {
     organization = "demo-land"
   },
   RGS-RKE = {
-    organization = "aws-rke"
+    organization = "demo-land"
   }
 }

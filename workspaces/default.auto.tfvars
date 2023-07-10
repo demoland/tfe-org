@@ -49,7 +49,7 @@ workspaces = {
       tag      = "default",
     }
   },
-    aws-vpc = {
+  aws-vpc = {
     description         = "AWS VPC"
     org                 = "demo-land",
     working_directory   = "/"

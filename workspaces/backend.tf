@@ -1,8 +1,8 @@
 terraform {
   backend "remote" {
-    organization = "demo-land"
+    organization = "hashicorp-federal"
     workspaces {
-      name = "tfe-organizations"
+      name = "tfe-workspaces"
     }
   }
 }

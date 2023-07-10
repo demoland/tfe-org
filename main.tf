@@ -1,3 +1,15 @@
+resource "tfe_organization" "this" {
+  for_each = var.organizations
+  name     = each.key
+  email    = each.value.email
+}
+
+resource "tfe_project" "this" {
+  for_each     = var.projects
+  name         = each.key
+  organization = each.value.organization
+}
+
 resource "tfe_workspace" "this" {
   for_each            = var.workspaces
   name                = each.key

@@ -1,3 +1,17 @@
+variable "organizations" {
+  description = "A map of organizations"
+  type = map(object({
+    email = string
+  }))
+}
+
+variable "projects" {
+  description = "A map of projects"
+  type = map(object({
+    organization = string
+  }))
+}
+
 variable "workspaces" {
   description = "A map of all workspaces"
   type = map(object({

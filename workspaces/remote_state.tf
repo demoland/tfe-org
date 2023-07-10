@@ -4,7 +4,7 @@ data "terraform_remote_state" "projects" {
   config = {
     organization = "hashicorp-federal"
     workspaces = {
-      name = "aws-projects"
+      name = "tfe-projects"
     }
   }
 }

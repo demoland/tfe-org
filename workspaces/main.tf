@@ -1,5 +1,5 @@
 locals {
-  projects = data.terraform_remote_state.projects.output.projects
+  projects = data.terraform_remote_state.projects.outputs.projects
 }
 
 resource "tfe_workspace" "this" {

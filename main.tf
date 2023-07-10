@@ -1,10 +1,11 @@
 resource "tfe_workspace" "this" {
-  for_each     = var.workspaces
-  name         = each.key
-  organization = each.value.org
-  project_id   = each.value.project_id
-  auto_apply   = each.value.auto_apply
-  trigger_prefixes = each.value.trigger_prefixes
+  for_each            = var.workspaces
+  name                = each.key
+  organization        = each.value.org
+  project_id          = each.value.project_id
+  auto_apply          = each.value.auto_apply
+  global_remote_state = each.value.global_remote_state
+  trigger_prefixes    = each.value.trigger_prefixes
   vcs_repo {
     identifier     = "${each.value.vcs.org}/${each.value.vcs.repo}"
     branch         = each.value.vcs.branch

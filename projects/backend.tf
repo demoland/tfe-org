@@ -2,7 +2,7 @@ terraform {
   backend "remote" {
     organization = "demo-land"
     workspaces {
-      name = "tfe-org"
+      name = "tfe-organizations"
     }
   }
 }

@@ -10,12 +10,14 @@ resource "tfe_workspace" "this" {
   auto_apply          = each.value.auto_apply
   global_remote_state = each.value.global_remote_state
   working_directory = each.value.working_directory
-  dynamic "trigger_prefixes" {
-   for_each = each.value.trigger_prefixes != null ? list(each.value.trigger_prefixes) : []
-    content {
-      trigger_prefixes = trigger_prefixes.value
-    }
-  }
+  trigger_prefixes  = try(each.value.trigger_prefixes, []) 
+
+  # dynamic "trigger_prefixes" {
+  #  for_each = each.value.trigger_prefixes != null ? list(each.value.trigger_prefixes) : []
+  #   content {
+  #     trigger_prefixes = trigger_prefixes.value
+  #   }
+  # }
 
   vcs_repo {
     identifier     = "${each.value.vcs.org}/${each.value.vcs.repo}"

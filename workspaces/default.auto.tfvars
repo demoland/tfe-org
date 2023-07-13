@@ -64,6 +64,22 @@ workspaces = {
       provider = "github",
       tag      = "default",
     }
+  },
+  hashidns = {
+    description         = "HashiCorp DNS"
+    org                 = "demo-land",
+    working_directory   = "/",
+    project_name        = "HASHISTACK",
+    trigger_prefixes    = [ "*.tf" ],
+    global_remote_state = true,
+    auto_apply          = true,
+    vcs = {
+      org      = "demoland",
+      repo     = "hashidns",
+      branch   = "main",
+      provider = "github",
+      tag      = "default",
+    }
   }
 
 }

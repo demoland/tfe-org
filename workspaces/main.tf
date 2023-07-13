@@ -11,7 +11,7 @@ resource "tfe_workspace" "this" {
   global_remote_state   = each.value.global_remote_state
   file_triggers_enabled = each.value.file_triggers_enabled
   working_directory     = each.value.working_directory
-  trigger_prefixes      = each.value.trigger_prefixes
+  trigger_patterns      = each.value.trigger_patterns
 
   vcs_repo {
     identifier     = "${each.value.vcs.org}/${each.value.vcs.repo}"

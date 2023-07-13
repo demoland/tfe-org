@@ -6,7 +6,7 @@ variable "workspaces" {
     working_directory     = string
     project_name          = string
     file_triggers_enabled = bool
-    trigger_prefixes      = list(string)
+    trigger_patterns      = list(string)
     global_remote_state   = bool
     auto_apply            = bool
     vcs = object({
@@ -24,7 +24,7 @@ variable "workspaces" {
       working_directory     = "/"
       project_name          = "Default"
       file_triggers_enabled = true
-      trigger_prefixes      = ["/"]
+      trigger_patterns      = ["**/*"]
       global_remote_state   = true
       auto_apply            = true
       vcs = {

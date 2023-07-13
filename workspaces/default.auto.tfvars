@@ -54,6 +54,7 @@ workspaces = {
     org                 = "demo-land",
     working_directory   = "/"
     project_name        = "HASHISTACK"
+    trigger_prefixes    = ["/"]
     global_remote_state = true
     auto_apply          = true
     vcs = {

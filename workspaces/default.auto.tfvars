@@ -34,13 +34,13 @@ workspaces = {
     }
   },
   aws-kms = {
-    description         = "AWS KMS"
+    description         = "AWS KMS",
     org                 = "demo-land",
-    working_directory   = "kms/"
-    project_name        = "HASHISTACK"
-    trigger_prefixes    = ["kms/"]
-    global_remote_state = true
-    auto_apply          = true
+    working_directory   = "kms/",
+    project_name        = "HASHISTACK",
+    trigger_prefixes    = ["kms/"],
+    global_remote_state = true,
+    auto_apply          = true,
     vcs = {
       org      = "demoland",
       repo     = "hashistack",
@@ -50,13 +50,13 @@ workspaces = {
     }
   },
   aws-vpc = {
-    description         = "AWS VPC"
+    description         = "AWS VPC",
     org                 = "demo-land",
-    working_directory   = "/"
-    project_name        = "HASHISTACK"
-    trigger_prefixes    = []
-    global_remote_state = true
-    auto_apply          = true
+    working_directory   = "/",
+    project_name        = "HASHISTACK",
+    trigger_prefixes    = [ "*.tf" ],
+    global_remote_state = true,
+    auto_apply          = true,
     vcs = {
       org      = "demoland",
       repo     = "aws-vpc",
@@ -65,6 +65,7 @@ workspaces = {
       tag      = "default",
     }
   }
+
 }
 
 

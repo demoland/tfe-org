@@ -1,13 +1,14 @@
 variable "workspaces" {
   description = "A map of all workspaces"
   type = map(object({
-    description         = string
-    org                 = string
-    working_directory   = string
-    project_name        = string
-    trigger_prefixes    = list(string)
-    global_remote_state = bool
-    auto_apply          = bool
+    description           = string
+    org                   = string
+    working_directory     = string
+    project_name          = string
+    file_triggers_enabled = bool
+    trigger_prefixes      = list(string)
+    global_remote_state   = bool
+    auto_apply            = bool
     vcs = object({
       org      = string
       repo     = string
@@ -18,13 +19,14 @@ variable "workspaces" {
   }))
   default = {
     "default_workspace" = {
-      description         = "Default Organization Text"
-      org                 = "demo-land"
-      working_directory   = "/"
-      project_name        = "Default"
-      trigger_prefixes    = ["/"]
-      global_remote_state = true
-      auto_apply          = true
+      description           = "Default Organization Text"
+      org                   = "demo-land"
+      working_directory     = "/"
+      project_name          = "Default"
+      file_triggers_enabled = true
+      trigger_prefixes      = ["/"]
+      global_remote_state   = true
+      auto_apply            = true
       vcs = {
         org      = "demoland"
         repo     = "TEST-DEFAULT"

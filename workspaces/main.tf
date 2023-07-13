@@ -9,8 +9,9 @@ resource "tfe_workspace" "this" {
   project_id          = local.projects[each.value.project_name]
   auto_apply          = each.value.auto_apply
   global_remote_state = each.value.global_remote_state
-  working_directory = each.value.working_directory
-  trigger_prefixes  = try(each.value.trigger_prefixes, []) 
+  working_directory   = each.value.working_directory
+  trigger_prefixes    = each.value.trigger_prefixes != null ? each.value.trigger_prefixes : null
+
 
   # dynamic "trigger_prefixes" {
   #  for_each = each.value.trigger_prefixes != null ? list(each.value.trigger_prefixes) : []

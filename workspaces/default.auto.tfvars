@@ -85,6 +85,23 @@ workspaces = {
       provider = "github",
       tag      = "default",
     }
+  },
+  voltron-boundary = {
+    description           = "Voltron Boundary Cluster"
+    org                   = "demo-land",
+    working_directory     = "/deployment/aws",
+    project_name          = "VOLTRON-ZT",
+    file_triggers_enabled = true
+    trigger_patterns      = ["deployment/aws/**/*"],
+    global_remote_state   = true,
+    auto_apply            = true,
+    vcs = {
+      org      = "demoland",
+      repo     = "voltron-zt",
+      branch   = "main",
+      provider = "github",
+      tag      = "default",
+    }
   }
 
 }
